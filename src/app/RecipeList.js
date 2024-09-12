@@ -1,12 +1,27 @@
 const RecipeList = ({recipe}) => {
   return (
-    <div className="recipe-container">
-        <h1>Tarif Adı</h1>
-        <img src="#" alt="yemek resmi"/>
+    <div className="recipeList-container">
+       
         <div>
 
-        <ul>
-            <li>Malzemeler</li>
+        <ul className="ul-list">
+            {recipe.length>0?(
+                recipe.map((item, index) => (
+                    <div key={index} className="content">
+                        <h3 className="recipe-label">{item.recipe.label}</h3>
+                        <img src={item.recipe.image} alt={item.recipe.label}  />
+
+                        <div className="tarif">
+                        <h4>Ingredients:</h4>
+                        <ul>
+                            {item.recipe.ingredients.map((item, index) => (
+                                <li key={index}>{item.text}</li>
+                            ))}
+                        </ul>
+                            </div>
+                    </div>
+                ))
+            ) :(<div>{recipe}</div>)}
         </ul>
         </div>
 

@@ -1,10 +1,76 @@
 *{
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   text-align: center;
+  margin: 0;
+  padding: 0;
+}
+body{
+  background-image: url('https://images.unsplash.com/photo-1512058454905-6b841e7ad132?q=80&w=1995&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  /* background-repeat: no-repeat; */
+  background-size: cover;
+  background-position: center;
+  height: 50vh;
 }
 .App{
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin-top: 20px;
+  
+ 
+}
+.App h1{
+  color: white;
+
+}
+.recipe-input{
+  width: 500px;
+  height: 30px;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+button{
+  height: 30px;
+  width: 50px;
+  background-color: greenyellow;
+  color: black;
+  border-radius: 3px;
+}
+.recipeList-container{
+  background-color: rgb(255, 255, 255);
+  border: 2px solid black;
+  border-radius: 10px;
+  margin-top:20px;
+}
+ul {
+  list-style-position: inside; 
+  padding-left: 0; 
+  list-style-type: disc;
+  margin-top: 10px;
+}
+
+li {
+  margin-left: 20px; 
+}
+.tarif{
+  width: 80%;
+  margin: 50px auto 0; 
+  padding: 5px;
+  background-color: #fff8dc;
+  border: 1px solid #ccc;
+  position: relative;
+  border: 0px solid black;
+  border-radius: 10px;
+}
+img{
+  border-radius: 20px;
+
+}
+.content{
+  margin-top: 20px;
+}
+.recipe-label{
+  margin-bottom: 20px;
 }
