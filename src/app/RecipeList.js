@@ -21,7 +21,7 @@ const RecipeList = ({recipe}) => {
                             </div>
                     </div>
                 ))
-            ) :(<div>{recipe}</div>)}
+            ) :(<div></div>)}
         </ul>
         </div>
 

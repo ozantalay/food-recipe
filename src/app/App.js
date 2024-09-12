@@ -7,29 +7,33 @@ const App = () => {
 
     const [recipe,setRecipe]=useState([]);
     const [search,setSearch]=useState("");
+    const [query,setQuery]=useState("")
 
     const Api_Id="3757a845"
     const Api_Key="bc13148583dfe7d3d8a465633f1f07f4"
     const url=`https://api.edamam.com/search?q=${search}&app_id=${Api_Id}&app_key=${Api_Key}`
 
-   
+    useEffect(()=>{
      const getRecipes=async()=>{
-        try{
-            const response=await axios.get(url);
-            const data=response.data
-            setRecipe(response.data.hits);
-            console.log(data);
-        }catch(error){
-            console.log("veri çekilirken hata meydana geldi",error);
+        if(query){
+
+            try{
+                const response=await axios.get(url);
+                const data=response.data
+                setRecipe(response.data.hits);
+                console.log(data);
+            }catch(error){
+                console.log("veri çekilirken hata meydana geldi",error);
+            }
         }
     }
-  
-    
+    getRecipes()
+    },[query])
+    // const searchRecipe=
 
     const handleSubmit=(e)=>{
         e.preventDefault();
-        getRecipes()
-
+        setQuery(search);
     }
 
 
